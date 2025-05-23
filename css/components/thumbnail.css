@@ -1,0 +1,233 @@
+/*------------HOME THUMBNAIL ------------  */
+
+
+.thumbnail-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+  justify-content: start;
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  .thumbnail-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 162 / 216;
+  overflow: hidden;
+  box-shadow: 0px 3.221px 12.078px 0px rgba(0, 0, 0, 0.65);
+}
+
+@media (min-width: 768px) {
+  .thumbnail-container {
+    aspect-ratio: 250 / 300;
+  }
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-title {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  white-space: nowrap;
+  /* make the title one line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.thumbnail-tags {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  gap: 6px;
+  padding: 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  white-space: normal;
+  /* Allow tag wrapping */
+  max-height: calc(2 * 24px + 6px);
+  /* 24px tag height + 6px gap between lines */
+}
+
+.thumbnail-tag {
+  background-color: #f5e9d6;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .thumbnail-tag {
+    font-size: 14px;
+  }
+}
+
+
+/*------------ACCOUNT THUMBNAIL ------------  */
+.account-thumbnails-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .account-thumbnails-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .account-thumbnails-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 2.5rem;
+  }
+}
+
+.account-thumbnail-container {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 3.221px 12.078px 0px rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  background: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.account-thumbnail-container:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 480px) {
+  .account-thumbnail-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+}
+
+.account-thumbnail-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.account-thumbnail-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.account-thumbnail-container:hover .account-thumbnail-img {
+  transform: scale(1.1);
+}
+
+.account-thumbnail-title {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #f5e9d6;
+  color: #22343c;
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.account-thumbnail-tags {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  overflow: hidden;
+  white-space: normal;
+  max-height: calc(2 * 24px + 6px);
+  z-index: 1;
+}
+
+.account-thumbnail-tag {
+  background-color: #f5e9d6;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .account-thumbnail-tag {
+    font-size: 14px;
+  }
+}
+
+.account-thumbnail-controls {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.account-thumbnail-controls .btn {
+  background: #f5e9d6;
+  color: #22343c;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.account-thumbnail-controls .account-delete-btn {
+  padding: 8px 12px;
+}

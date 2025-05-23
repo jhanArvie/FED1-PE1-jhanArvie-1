@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<body>
+    <!-- Non-Login Header -->
+    <nav class=" bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="index.html"><img class="logo pl-6-desktop cursor-pointer" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenu">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="post/index.html" >Blog</a></li>
+                    <li><a href="templates/about.html" >About</a></li>
+                </ul>
+                <ul class="flex gap-2 items-center gap-2-desktop">
+                    <li><a href="account/login.html" >Sign in</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="account/register.html" >Register</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenu" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center  fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1 ">
+                        <li><a href="index.html">Home</a></li>
+    
+                        <li><a href="templates/about.html">About</a></li>
+                    </ul>
+                    <ul class="text-center flex flex-column items-center gap-1">
+                        <li><a href="account/login.html">Sign in</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+     </nav>
+
+
+
+
+
+
+            <!-- Login Header -->
+    <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="#"><img class="logo pl-6-desktop cursor-pointer" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenuLogin">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2  logo pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#" >Blog</a></li>
+                    <li><a href="#" >About</a></li>
+                </ul>
+                <ul class="flex gap-2 items-center gap-2-desktop">
+                    <li><a href="#" >My Poems</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="#" >Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenuLogin" class="hide-desktop ">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center  fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1 ">
+                        <li><a href="#">Home</a></li>
+    
+                        <li><a href="#">About</a></li>
+                    </ul>
+                    <ul class="text-center flex flex-column items-center gap-1">
+                        <li><a href="#">My Poems</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+    </nav>
+
+
+    
+    <a href="index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+
+
+
+    <script src="../js/layout/layout.js"></script>
+</body>
+</html>

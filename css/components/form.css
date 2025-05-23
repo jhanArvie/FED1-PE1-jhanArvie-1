@@ -1,0 +1,33 @@
+
+/* Register and Login Forms */
+.form-container {
+  width: clamp(250px, 90%, 632px);
+}
+
+.login-form {
+    width: clamp(20%, 80%, 100%);
+ 
+    label {
+        font-family: "Crimson Pro";
+    }
+    .form-inputs {
+        width: 100%;
+    }
+    .normal-input {
+        height: 30px;
+        border: none;
+        width: 100%;
+    } 
+    .normal-input::placeholder {
+        color: rgba(0, 0, 0, 0.50);
+    }
+
+    .register-textarea {
+        height: 125px;
+    }
+    .register-textarea::placeholder {
+        font-family: "Crimson Pro";
+        font-size: 16px;
+    }
+}
+

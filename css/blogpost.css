@@ -1,0 +1,81 @@
+header {
+    max-width: 100%;
+    position: relative;
+}
+
+.blogpost-header-img {
+    width: 235px;
+    height: 300px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.65);
+}
+
+
+.tag-container {
+    max-width: 1000px;
+
+    .tag-wrapper {
+        max-width: 1000px;
+    }
+}
+
+
+.main-content-poem {
+    width: 100%;
+
+    .blog-poem {
+        max-width: 700px;
+        text-align: left;
+        font-family: "Crimson Pro", serif;
+        line-height: 1.6;
+        white-space: pre-line;
+        padding: 1rem;
+    }
+
+    .poem-stanza {
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .poem-stanza p {
+        margin: 0;
+        padding: 0;
+        color: var(--primary-color);
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .blogpost-header-img {
+        width: 350px;
+        height: 450px;
+    }
+
+    .header-info {
+        width: 500px;
+        max-width: 600px;
+    }
+
+    .main-content-poem {
+        .blog-poem {
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .poem-stanza {
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .tag-container {
+        padding-left: 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .tag-container {
+        padding-left: 18%;
+    }
+}

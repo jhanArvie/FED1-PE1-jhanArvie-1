@@ -1,0 +1,224 @@
+/* Header Styles */
+#poemHeader {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.header-img-container {
+    width: 100%;
+    max-width: 235px;
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.header-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-content {
+    flex: 1;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.header-poem-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    word-wrap: break-word;
+    min-height: calc(1.8em * 2);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+    height: auto;
+}
+
+.nav-btn {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    #poemHeader {
+        padding: 0 4rem;
+    }
+
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-img-container {
+        max-width: 300px;
+    }
+
+    .header-poem-title {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #poemHeader {
+        padding: 0 5rem;
+    }
+}
+
+/* Thumbnail Styles */
+.thumbnail-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .thumbnail-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .thumbnail-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .thumbnail-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        width: 85%;
+    }
+}
+
+.thumbnail-container {
+    position: relative;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    margin: 0;
+}
+
+.thumbnail-container:hover {
+    transform: translateY(-5px);
+}
+
+.thumbnail-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-title {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    right: 0;
+    padding: 0.75rem;
+    background-color: var(--secondary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thumbnail-tags {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.thumbnail-tag {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+/* Owner Post Styles */
+.owner-post {
+    border: 2px solid var(--primary-color);
+}
+
+.owner-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--text-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: var(--primary-color);
+}
+
+/* Media Queries */
+
+/* Blog Posts Styles */
+.blogposts-text {
+    border-top: 15px solid var(--primary-color);
+}
+
+.blogposts-text p {
+    max-width: 800px;
+}

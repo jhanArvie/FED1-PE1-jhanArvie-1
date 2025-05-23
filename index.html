@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoemTales - Share Your Poetry</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="index.html"><img class="logo pl-6-desktop cursor-pointer hover-effect" loading="lazy" src="assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="assets/icons/Menu.png" alt="menu" id="burgerMenu">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="index.html" class="hover-effect">Home</a></li>
+                    <li><a href="templates/about.html" class="hover-effect">About</a></li>
+                </ul>
+                <!-- Guest Navigation -->
+                <ul class="flex gap-2 items-center gap-2-desktop" id="guestNav">
+                    <li><a href="account/login.html" class="hover-effect">Sign in</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="account/register.html" class="hover-effect">Register</a></li>
+                </ul>
+                <!-- User Navigation -->
+                <ul class="flex gap-2 items-center gap-2-desktop hide" id="userNav">
+                    <li><a href="account/account.html" class="hover-effect">My Poems</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="#" id="logoutBtn" class="sign-out-btn hover-effect">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenu" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1">
+                        <li><a href="index.html" class="hover-effect">Home</a></li>
+                        <li><a href="templates/about.html" class="hover-effect">About</a></li>
+                    </ul>
+                    <!-- Guest Navigation Mobile -->
+                    <ul class="text-center flex flex-column items-center gap-1" id="guestNavMobile">
+                        <li><a href="account/login.html" class="hover-effect">Sign in</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="account/register.html" class="hover-effect">Register</a></li>
+                    </ul>
+                    <!-- User Navigation Mobile -->
+                    <ul class="text-center flex flex-column items-center gap-1 hide" id="userNavMobile">
+                        <li><a href="account/account.html" class="hover-effect">My Poems</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="#" id="logoutBtnMobile" class="sign-out-btn hover-effect">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+    </nav>
+
+    <main>
+        <header class="mb-6">
+            <img id="prevBtn" loading="lazy" src="assets/icons/prev-btn.png" alt="Previous Page Button" class="nav-btn prev-btn ml-3 hover-effect">
+            <div id="poemHeader">
+                <div class="flex flex-column items-center flex-row-desktop justify-center-desktop">
+                    <div class="header-img-container m-6 radius-10 hover-effect">
+                        <img class="radius-10" loading="lazy" src="assets/images/image-1.png" alt="Street">
+                    </div>
+                    <div class="header-content">
+                        <h1 id="poemTitle" class="header-poem-title fs-28 text-center font-brand mb-4 mt-4 fs-42-desktop hover-effect">Poem's title</h1>
+                        <p id="poemAuthor" class="fw-600 ml-4"><span>Author:</span> <span>Author Name</span></p>
+                        <p id="poemPublished" class="fs-14 fw-300 ml-4"><span>Published:</span> <span>Published Date</span></p>
+                    </div>
+                </div>
+            </div>
+            <img id="nextBtn" loading="lazy" src="assets/icons/next-btn.png" alt="Next Page Button" class="nav-btn next-btn mr-3 hover-effect">
+        </header>
+        <section class="blogposts-text font-brand flex flex-column items-center">
+            <h2 class=" fs-30 pt-5 pb-5 fs-50-desktop">Blog Posts</h2>
+            <p class="fs-18 mr-4 mb-4 ml-4 fs-20-desktop text-center">Poems are a beautiful way to express feelings and thoughts. They inspire us to see the world differently, connect deeply, and find meaning in simple words. </p>
+        </section>
+        
+
+        <!-- FILTER -->
+        <div class="filter-section pr-6 pl-6">
+          <select id="sortDate" class="filter-dropdown hover-effect" name="sort-date">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+          <select id="sortTitle" class="filter-dropdown hover-effect" name="sort-title">
+            <option value="none">Sort by Title</option>
+            <option value="title-az">Title A-Z</option>
+            <option value="title-za">Title Z-A</option>
+          </select>
+          <select id="tagFilter" class="filter-dropdown hover-effect" name="tag-filter">
+            <!-- Add more tags as needed -->
+          </select>
+          <input
+            id="searchInput"
+            type="text"
+            class="filter-search hover-effect"
+            placeholder="Search by title"
+            name="search-title"
+            autocomplete="off"
+          />
+        </div>
+
+         <!-- Home Thumbnails -->
+         <section class="mt-6 p-4 mb-6">
+            <div class="thumbnail-wrapper">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+            
+            <!-- Pagination Controls -->
+            <div class="pagination-controls">
+                <!-- Pagination will be dynamically inserted here -->
+            </div>
+
+             
+          </section>
+           
+        
+    </main>
+
+    <footer class="footer bg-secondary flex flex-column items-center pt-6 pr-6 pl-6 text-center">
+        <a href="index.html"><img loading="lazy" class="logo hover-effect" src="assets/logo.png" alt="logo"></a>
+        <span class="fs-16 fw-700 mt-3">Follow Us</span>
+        <div class="flex flex-wrap gap-3 pt-4 pb-4 justify-center">
+            <img loading="lazy" src="assets/icons/facebook.png" alt="facebook" class="hover-effect">
+            <img loading="lazy" src="assets/icons/instagram.png" alt="instagram" class="hover-effect">
+            <img loading="lazy" src="assets/icons/youtube.png" alt="youtube" class="hover-effect">
+            <img loading="lazy" src="assets/icons/X.png" alt="X" class="hover-effect">
+        </div>
+        <p class="fs-18 fw-600 fs-20-desktop">Project Exam 2024-2025</p>
+        <p class="fs-18 fw-600 fs-20-desktop">PoemTales All Rights Reserved</p>
+        <div class="footer-bottom bg-primary mt-6"></div>
+    </footer>
+    
+    <script src="js/layout/nav.js" type="module"></script>
+    <script src="js/layout/layout.js" type="module"></script>
+    <script src="js/pages/index.js" type="module"></script>
+</body>
+</html>

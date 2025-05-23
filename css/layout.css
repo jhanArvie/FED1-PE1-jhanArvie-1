@@ -1,0 +1,105 @@
+.logo {
+    height: 40px;
+}
+
+
+.divider {
+    position: relative;
+    width: 100px;
+    height: 5px;
+}
+
+.divider-desktop {
+    position: relative;
+    width: 5px;
+    height: 20px;
+}
+
+dialog {
+    max-width: 1600px;
+    border: none;
+    margin-top: 72px;
+}
+
+dialog::backdrop {
+    background-color: transparent;
+}
+
+.modal-content {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+
+.footer {
+    border-bottom: 15px solid var(--primary-color);
+
+    .logo {
+        height: 40px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    nav {
+        height: 100px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .footer {
+        .logo {
+            height: 50px;
+        }
+    }
+}
+
+
+/* ----- TALES ----- */
+.tales-row-wrapper {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    /* Hide overflow on both sides */
+    position: relative;
+}
+
+.tales-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* Center items inside the row */
+    align-items: center;
+    gap: 2rem;
+    min-height: 3.5em;
+    width: max-content;
+    /* Only as wide as its content */
+    margin: 0 auto;
+}
+
+.tale {
+
+    white-space: nowrap;
+    padding: 0 0.5rem;
+}
+
+@media (max-width: 500px) {
+    .tale {
+        padding: 0 0.3rem;
+    }
+
+    .tales-row {
+        gap: 1rem;
+    }
+}
+
+.tale.dark {
+    color: #1f2d3d;
+}
+
+.tale.orange {
+    color: #f2994a;
+}

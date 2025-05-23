@@ -1,0 +1,24 @@
+.tag {
+    display: inline-flex;
+    font-size: var(--fs-12);
+    padding: 3px 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: .10rem;
+}
+
+.tag--brand {
+    background: var(--brand-color);
+}
+
+.tag--secondary {
+    background: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .tag {
+        padding: 5px 10px;
+        font-size: var(--fs-16);
+    }
+}

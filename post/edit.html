@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post - PoemTales</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/edit-post.css">
+</head>
+<body>
+    <!-- Login Header -->
+    <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="../index.html"><img class="logo pl-6-desktop cursor-pointer" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenu">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 logo pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <li><a href="../templates/about.html">About</a></li>
+                </ul>
+                <ul class="flex gap-2 items-center gap-2-desktop">
+                    <li><a href="../account/account.html">My Poems</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="../account/login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenu" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1">
+                        <li><a href="../index.html">Home</a></li>
+    
+                        <li><a href="../templates/about.html">About</a></li>
+                    </ul>
+                    <ul class="text-center flex flex-column items-center gap-1">
+                        <li><a href="../account/account.html">My Poems</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="../account/login.html">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+    </nav>
+
+    <main class="p-5 mb-6">
+        <section><h1 class="text-center font-brand fs-30 mt-6 mb-6 fs-50-desktop">Edit Post</h1></section>
+        <section class="edit-post-section bg-primary flex items-center justify-center">
+            <form class="edit-post-form flex flex-column items-center">
+                <label for="post-title" class="edit-post-label">Title</label>
+                <input type="text" id="post-title" class="edit-post-input" placeholder="Title of your poem">
+
+                <label for="post-content" class="edit-post-label">Post Content</label>
+                <textarea id="post-content" class="edit-post-textarea" placeholder="Write Your Poem"></textarea>
+                <div class="edit-post-charcount">0/10000</div>
+
+                <label for="post-image-url" class="edit-post-label">Image URL</label>
+                <input type="text" id="post-image-url" class="edit-post-input" placeholder="Image link">
+
+                <label for="post-image-name" class="edit-post-label">Name Your Image</label>
+                <input type="text" id="post-image-name" class="edit-post-input" placeholder="Trees Under the moonlight">
+
+                <label for="post-tags" class="edit-post-label">Tags (separate by commas)</label>
+                <input type="text" id="post-tags" class="edit-post-input" placeholder="tag your post, trees, moonlight">
+
+                <div class="edit-post-actions flex justify-between items-center mt-6 gap-2">
+                    <div class="flex gap-2">
+                        <button type="button" class="edit-post-delete">Delete Post</button>
+                        <button type="button" class="edit-post-cancel">Cancel</button>
+                    </div>
+                    <button type="submit" class="edit-post-submit">Submit Post</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer bg-secondary flex flex-column items-center pt-6 pr-6 pl-6 text-center">
+        <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+        <span class="fs-16 fw-700 mt-3">Follow Us</span>
+        <div class="flex flex-wrap gap-3 pt-4 pb-4 justify-center">
+            <img src="../assets/icons/facebook.png" alt="facebook">
+            <img src="../assets/icons/instagram.png" alt="instagram">
+            <img src="../assets/icons/youtube.png" alt="youtube">
+            <img src="../assets/icons/X.png" alt="X">
+        </div>
+        <p class="fs-18 fw-600 fs-20-desktop">Project Exam 2024-2025</p>
+        <p class="fs-18 fw-600 fs-20-desktop">PoemTales All Rights Reserved</p>
+        <div class="footer-bottom bg-primary mt-6"></div>
+    </footer>
+
+    <script type="module" src="../js/layout/layout.js"></script>
+    <script type="module" src="../js/pages/edit.js"></script>
+</body>
+</html>

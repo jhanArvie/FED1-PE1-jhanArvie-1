@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - PoemTales</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/about.css">
+   
+</head>
+<body>
+     <!-- Non-Login Header -->
+     <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="../index.html"><img class="logo pl-6-desktop cursor-pointer" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenu">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <!-- Guest Navigation -->
+                <ul class="flex gap-2 items-center gap-2-desktop" id="guestNav">
+                    <li><a href="../account/login.html">Sign in</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="../account/register.html">Register</a></li>
+                </ul>
+                <!-- User Navigation -->
+                <ul class="flex gap-2 items-center gap-2-desktop hide" id="userNav">
+                    <li><a href="../account/account.html">My Poems</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="../account/login.html" id="logoutBtn" class="sign-out-btn hover-effect">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenu" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1">
+                        <li><a href="../index.html" class="hover-effect">Home</a></li>
+                        <li><a href="about.html" class="hover-effect">About</a></li>
+                    </ul>
+                    <!-- Guest Navigation Mobile -->
+                    <ul class="text-center flex flex-column items-center gap-1" id="guestNavMobile">
+                        <li><a href="../account/login.html" class="hover-effect">Sign in</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="../account/register.html" class="hover-effect">Register</a></li>
+                    </ul>
+                    <!-- User Navigation Mobile -->
+                    <ul class="text-center flex flex-column items-center gap-1 hide" id="userNavMobile">
+                        <li><a href="../account/account.html" class="hover-effect">My Poems</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a id="logoutBtnMobile" class="sign-out-btn hover-effect">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+     </nav>
+
+    <main>
+        <header class="about-header flex flex-column justify-center gap-6 items-center">
+            <h1 class="bg-primary text-secondary text-center radius-10 fs-30 p-3 mr-6 ml-6 fs-40-desktop font-brand">Connecting readers</h1>
+            <h1 class="bg-primary text-secondary text-center radius-10 fs-30 mr-3 ml-3 p-3 fs-40-desktop font-brand">through love poems and life reflections.</h1>
+        </header>
+
+        <div class="tales-row-wrapper flex justify-center align-center">
+            <div class="tales-row flex justify-between p-6 font-brand gap-1 gap-6-desktop fs-20 fs-50-desktop">
+              <span class="tale dark">Tales</span>
+              <span class="tale orange">Tales</span>
+              <span class="tale dark">Tales</span>
+              <span class="tale orange">Tales</span>
+              <span class="tale dark">Tales</span>
+              <span class="tale orange">Tales</span>
+              <span class="tale dark">Tales</span>
+            </div>
+        </div>
+          
+        <section class="about-team flex flex-column items-center text-center m-6 gap-6 pb-6">
+            <div>  
+                <h2 class="fs-30 font-brand mb-6 fs-50-desktop">About Us</h2>
+                <p class="fs-18-desktop">PoemTales is a digital publishing platform that specializes in curating and sharing heartfelt poetry and personal reflections. Founded in 2021, our mission is to create a space where emotions are translated into words—connecting readers from all walks of life through beautifully written love poems, life experiences, and inspiring narratives.</p>
+            </div>
+            <div>
+                <h2 class="fs-30 font-brand mb-6 fs-50-desktop">Our Team</h2>
+                <p class="fs-18-desktop">We are a passionate group of writers, editors, and creative thinkers committed to building a community for poetry lovers. Our lean yet dynamic team works remotely across the Philippines, contributing to the platform with daily posts, collaborative writing challenges, and community engagement projects.</p>
+            </div>
+        </section>
+        <div class="mt-6 mb-6 pb-6 flex justify-center">
+            <img class="logo-bottom scale-150-desktop" src="../assets/circle-logo.png" alt="logo">
+        </div>
+    </main>
+
+    <footer class="footer bg-secondary flex flex-column items-center pt-6 pr-6 pl-6 text-center">
+        <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+        <span class="fs-16 fw-700 mt-3">Follow Us</span>
+        <div class="flex flex-wrap gap-3 pt-4 pb-4 justify-center">
+            <img src="../assets/icons/facebook.png" alt="facebook">
+            <img src="../assets/icons/instagram.png" alt="instagram">
+            <img src="../assets/icons/youtube.png" alt="youtube">
+            <img src="../assets/icons/X.png" alt="X">
+        </div>
+        <p class="fs-18 fw-600 fs-20-desktop">Project Exam 2024-2025</p>
+        <p class="fs-18 fw-600 fs-20-desktop">PoemTales All Rights Reserved</p>
+        <div class="footer-bottom bg-primary mt-6"></div>
+    </footer>
+    <script src="../js/layout/layout.js" type="module"></script>
+    <script src="../js/layout/nav.js" type="module"></script>
+</body>
+</html>

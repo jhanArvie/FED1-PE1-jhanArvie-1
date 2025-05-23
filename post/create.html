@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - PoemTales</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/create-post.css">
+</head>
+<body>
+    <!-- Login Header -->
+    <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="../index.html"><img class="logo pl-6-desktop cursor-pointer" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenuLogin">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 logo pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <li><a href="../templates/about.html">About</a></li>
+                </ul>
+                <ul class="flex gap-2 items-center gap-2-desktop">
+                    <li><a href="../account/account.html">My Poems</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="../account/login.html" id="signOutDesktop" class="sign-out-btn">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenuLogin" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1">
+                        <li><a href="../index.html">Home</a></li>
+    
+                        <li><a href="../templates/about.html">About</a></li>
+                    </ul>
+                    <ul class="text-center flex flex-column items-center gap-1">
+                        <li><a href="../account/account.html">My Poems</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="../account/login.html" id="signOutMobile" class="sign-out-btn">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+    </nav>
+
+    <main class="p-5 mb-6">
+        <section><h1 class="text-center font-brand fs-30 mt-6 mb-6 fs-50-desktop">Create Post</h1></section>
+        <section class="create-post-section bg-primary flex items-center justify-center">
+            <form id="createPostForm" class="create-post-form flex flex-column items-center">
+              <label for="postTitle" class="create-post-label">Title</label>
+              <input type="text" 
+                     id="postTitle" 
+                     class="create-post-input" 
+                     placeholder="Title of your poem" 
+                     required
+                     maxlength="200">
+              <small class="text-secondary fs-12">Maximum 200 characters</small>
+          
+              <label for="postContent" class="create-post-label">Post Content</label>
+              <textarea id="postContent" 
+                       class="create-post-textarea" 
+                       placeholder="Write Your Poem" 
+                       required></textarea>
+              <div id="charCount" class="create-post-charcount">0/10000</div>
+          
+              <label for="postImageUrl" class="create-post-label">Image URL</label>
+              <input type="url" 
+                     id="postImageUrl" 
+                     class="create-post-input" 
+                     placeholder="https://example.com/image.jpg" 
+                     required>
+          
+              <label for="postImageName" class="create-post-label">Name Your Image</label>
+              <input type="text" 
+                     id="postImageName" 
+                     class="create-post-input" 
+                     placeholder="Trees Under the moonlight" 
+                     required>
+          
+              <label for="postTags" class="create-post-label">Tags (separate by commas)</label>
+              <input type="text" 
+                     id="postTags" 
+                     class="create-post-input" 
+                     placeholder="poem, nature, love" 
+                     required>
+          
+              <div id="errorMessage" class="error-message text-center mt-3 text-brand"></div>
+              <button type="submit" id="submitPost" class="create-post-submit">Submit Post</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer bg-secondary flex flex-column items-center pt-6 pr-6 pl-6 text-center">
+        <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+        <span class="fs-16 fw-700 mt-3">Follow Us</span>
+        <div class="flex flex-wrap gap-3 pt-4 pb-4 justify-center">
+            <img src="../assets/icons/facebook.png" alt="facebook">
+            <img src="../assets/icons/instagram.png" alt="instagram">
+            <img src="../assets/icons/youtube.png" alt="youtube">
+            <img src="../assets/icons/X.png" alt="X">
+        </div>
+        <p class="fs-18 fw-600 fs-20-desktop">Project Exam 2024-2025</p>
+        <p class="fs-18 fw-600 fs-20-desktop">PoemTales All Rights Reserved</p>
+        <div class="footer-bottom bg-primary mt-6"></div>
+    </footer>
+    
+
+    <script type="module" src="../js/layout/layout.js"></script>
+    <script type="module" src="../js/pages/create-post.js"></script>
+</body>
+</html>

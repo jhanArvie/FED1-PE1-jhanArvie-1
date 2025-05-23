@@ -1,0 +1,237 @@
+.edit-post-section {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 32px 0;
+    box-sizing: border-box;
+    transition: max-width 0.3s, min-height 0.3s;
+}
+
+.edit-post-form {
+    width: 100%;
+    max-width: 856px;
+    margin: 0 auto;
+    transition: max-width 0.3s;
+    position: relative;
+}
+
+.edit-post-label {
+    color: #f5e9d6;
+    font-size: 1.1rem;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    text-align: center;
+    transition: font-size 0.3s;
+}
+
+.edit-post-input,
+.edit-post-textarea {
+    width: 100%;
+    min-width: 140px;
+    max-width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-family: 'Crimson Pro', serif;
+    box-sizing: border-box;
+    transition: font-size 0.3s, min-width 0.3s;
+}
+
+.edit-post-textarea {
+    min-height: 400px;
+    max-height: 640px;
+    resize: vertical;
+}
+
+.edit-post-charcount {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    align-self: flex-end;
+    margin-right: 24px;
+}
+
+.edit-post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 32px;
+    gap: 32px;
+}
+
+.edit-post-delete {
+    background: transparent;
+    color: #e09c50;
+    border: 3px solid #e09c50;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+.edit-post-delete:hover {
+    background: #e09c50;
+    color: #22343c;
+}
+
+.edit-post-cancel {
+    background: transparent;
+    border: none;
+    color: #e09c50;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 12px 0;
+}
+
+.edit-post-cancel:hover {
+    color: #d0862f;
+}
+
+.edit-post-submit {
+    background: #e09c50;
+    color: #22343c;
+    font-size: 1.1rem;
+    font-family: 'Crimson Pro', serif;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+.edit-post-submit:hover {
+    background: #d0862f;
+}
+
+@media (max-width: 599px) {
+    .edit-post-section {
+        max-width: 1000px;
+        min-height: 1226px;
+        padding: 24px 0;
+    }
+
+    .edit-post-form {
+        max-width: 280px;
+    }
+
+    .edit-post-input,
+    .edit-post-textarea {
+        min-width: 140px;
+        max-width: 280px;
+        font-size: 1rem;
+    }
+
+    .edit-post-label {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .edit-post-actions {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .edit-post-delete,
+    .edit-post-cancel,
+    .edit-post-submit {
+        font-size: 1rem;
+        padding: 10px 18px;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .edit-post-section {
+        max-width: 1000px;
+        min-height: 700px;
+        padding: 32px 0;
+    }
+
+    .edit-post-form {
+        max-width: 480px;
+    }
+
+    .edit-post-input,
+    .edit-post-textarea {
+        min-width: 180px;
+        max-width: 480px;
+        font-size: 1.05rem;
+    }
+
+    .edit-post-label {
+        font-size: 1.15rem;
+        text-align: left;
+    }
+
+    .edit-post-actions {
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .edit-post-delete,
+    .edit-post-cancel,
+    .edit-post-submit {
+        font-size: 1.1rem;
+        padding: 12px 32px;
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .edit-post-section {
+        max-width: 1000px;
+        min-height: 900px;
+        padding: 48px 0;
+    }
+
+    .edit-post-form {
+        max-width: 856px;
+    }
+
+    .edit-post-input,
+    .edit-post-textarea {
+        min-width: 220px;
+        max-width: 856px;
+        font-size: 1.1rem;
+    }
+
+    .edit-post-label {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .edit-post-actions {
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .edit-post-delete,
+    .edit-post-cancel,
+    .edit-post-submit {
+        font-size: 1.1rem;
+        padding: 12px 32px;
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+    }
+}

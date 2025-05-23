@@ -1,0 +1,32 @@
+.about-header {
+    background-image: url('../assets/images/About\ backgorund.png'); /* Adjust the path and filename as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Optional: center content vertically */
+    justify-content: center; /* Optional: center content horizontally */
+
+    h1 {
+        background: rgba(34, 52, 60, 0.8);
+        max-width: 1000px;
+    }
+}
+
+
+ .about-team  {
+    div {
+        max-width: 800px;
+    }
+ }
+
+@media (min-width: 768px) {
+    header {
+        h1 {
+        max-width: 1000px;
+    }
+    }
+   
+}

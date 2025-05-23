@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - PoemTales</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+     <!-- Non-Login Header -->
+     <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="../index.html"><img class="logo pl-6-desktop cursor-pointer" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenu">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <li><a href="../templates/about.html">About</a></li>
+                </ul>
+                <ul class="flex gap-2 items-center gap-2-desktop">
+                    <li><a href="../account/login.html">Sign in</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="../account/register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenu" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1">
+                        <li><a href="../index.html">Home</a></li>
+    
+                        <li><a href="../templates/about.html">About</a></li>
+                    </ul>
+                    <ul class="text-center flex flex-column items-center gap-1">
+                        <li><a href="../account/login.html">Sign in</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="../account/register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+     </nav>
+
+    <main class="flex flex-column items-center mt-6 mb-6">
+        <section class="form-container flex justify-center bg-primary p-6 mt-6 mb-6 radius-10">
+          <form id="registerForm" class="login-form flex flex-column items-center" action="">
+            <div class="mb-6">
+                <h1 class="font-brand fs-30 fs-50-desktop text-center text-secondary">Register</h1>
+            </div>
+            <div class="form-inputs flex flex-column gap-3">
+                <div>
+                    <label class="fs-18-desktop fw-500 text-secondary" for="registerName">Name</label>
+                    <input id="registerName" class="normal-input radius-10 pl-3 pr-3" required name="Name" type="text" placeholder="Name or Code Name">
+                </div>
+                <div>
+                    <label class="fs-18-desktop fw-500 text-secondary" for="registerEmail">Email</label>
+                    <input id="registerEmail" class="normal-input radius-10 pl-3 pr-3" required type="email" placeholder="example@email.com">
+                </div>
+                <div>
+                    <label class="fs-18-desktop fw-500 text-secondary" for="registerPassword">Password</label>
+                    <input id="registerPassword" class="normal-input radius-10 pl-3 pr-3" required type="password" placeholder="password">
+                </div>
+                <div class="flex flex-column mt-4">
+                    <label class="fs-18-desktop fw-500 text-secondary" for="registerBio">Bio</label>
+                    <textarea 
+                        class="register-textarea radius-10 p-3" 
+                        name="Bio" 
+                        id="registerBio" 
+                        placeholder="Your short Bio from deep within." 
+                        maxlength="160"
+                        onpaste="return this.value.length <= 160"
+                    ></textarea>
+                    <small class="text-secondary mt-1" id="bioCharCount">0/160 characters</small>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary mt-6">Submit Registration</button>
+          </form>  
+        </section>
+    </main>
+
+    <div class="tales-row-wrapper flex justify-center align-center">
+        <div class="tales-row flex justify-between p-6 font-brand gap-1 gap-6-desktop fs-20 fs-50-desktop">
+          <span class="tale dark">Tales</span>
+          <span class="tale orange">Tales</span>
+          <span class="tale dark">Tales</span>
+          <span class="tale orange">Tales</span>
+          <span class="tale dark">Tales</span>
+          <span class="tale orange">Tales</span>
+          <span class="tale dark">Tales</span>
+        </div>
+    </div>
+
+    <footer class="footer bg-secondary flex flex-column items-center pt-6 pr-6 pl-6 text-center">
+        <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+        <span class="fs-16 fw-700 mt-3">Follow Us</span>
+        <div class="flex flex-wrap gap-3 pt-4 pb-4 justify-center">
+            <img src="../assets/icons/facebook.png" alt="facebook">
+            <img src="../assets/icons/instagram.png" alt="instagram">
+            <img src="../assets/icons/youtube.png" alt="youtube">
+            <img src="../assets/icons/X.png" alt="X">
+        </div>
+        <p class="fs-18 fw-600 fs-20-desktop">Project Exam 2024-2025</p>
+        <p class="fs-18 fw-600 fs-20-desktop">PoemTales All Rights Reserved</p>
+        <div class="footer-bottom bg-primary mt-6"></div>
+    </footer>
+
+    <script src="../js/layout/nav.js" type="module"></script>
+    <script src="../js/layout/layout.js" type="module"></script>
+    <script src="../js/pages/register.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+.account-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.account-header {
+    width: 100%;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.account-thumbnails-wrapper {
+    display: grid;
+    /* Mobile: 1 column */
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.account-thumbnail-container {
+    position: relative;
+    background-color: var(--color-dark);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.account-thumbnail-controls {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.account-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1;
+}
+
+.account-thumbnail-title {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    opacity: 0.85;
+    color: var(--primary-color);
+    margin-top: -4px;
+    z-index: 1;
+}
+
+.account-thumbnail-tags {
+    position: absolute;
+    bottom: 3rem;
+    /* Position it just above the title */
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    z-index: 1;
+}
+
+.account-thumbnail-tag {
+    background-color: var(--secondary-color);
+    opacity: 0.85;
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-brand);
+    font-weight: 700;
+}
+
+.loading-icon {
+    animation: spin 1s linear infinite;
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.account-delete-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Small mobile screens */
+@media (max-width: 479px) {
+    .account-thumbnail-container {
+        width: calc(90vw - 2rem);
+        /* Adjust for padding */
+    }
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+    .account-thumbnails-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .account-thumbnail-container {
+        margin: 0;
+        width: auto;
+    }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+    .account-thumbnails-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        padding: 2.5rem;
+        gap: 4rem;
+    }
+}

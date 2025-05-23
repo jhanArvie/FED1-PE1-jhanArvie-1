@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PoemTales</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/account.css">
+    
+</head>
+<body>
+     <!-- Non-Login Header -->
+     <nav class="bg-secondary font-brand">
+        <div class="flex justify-between items-center p-3 p-4-desktop">
+            <a href="../index.html"><img class="logo pl-6-desktop cursor-pointer hover-effect" src="../assets/logo.png" alt="whole logo"></a>
+            <img class="hide-desktop" src="../assets/icons/Menu.png" alt="menu" id="burgerMenu">
+
+            <!-- Navigation Desktop -->
+            <div class="nav-desktop hide-mobile flex justify-between items-center p-3 gap-2 pr-4-desktop fs-20-desktop gap-5-desktop">
+                <ul class="flex gap-2 gap-3-desktop">
+                    <li><a href="../index.html" class="hover-effect">Home</a></li>
+                    <li><a href="../templates/about.html" class="hover-effect">About</a></li>
+                </ul>
+                <ul class="flex gap-2 items-center gap-2-desktop">
+                    <li><a href="login.html" class="active hover-effect">Sign in</a></li>
+                    <div class="divider-desktop radius-10 bg-brand"></div>
+                    <li><a href="register.html" class="hover-effect">Register</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Navigation Mobile -->
+        <dialog id="navMenu" class="hide-desktop">
+            <div class="modal-content flex items-center justify-center bg-secondary p-6">
+                <div class="nav-mobile hide-desktop flex flex-column justify-center items-center fs-16 gap-3">
+                    <ul class="text-center flex flex-column gap-1">
+                        <li><a href="../index.html" class="hover-effect">Home</a></li>
+                        <li><a href="../templates/about.html" class="hover-effect">About</a></li>
+                    </ul>
+                    <ul class="text-center flex flex-column items-center gap-1">
+                        <li><a href="login.html" class="active hover-effect">Sign in</a></li>
+                        <div class="divider radius-10 bg-brand"></div>
+                        <li><a href="register.html" class="hover-effect">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+     </nav>
+
+    <main class="flex flex-column items-center mt-6 mb-6">
+        <section class="form-container flex justify-center bg-primary p-6 mt-6 mb-6 radius-10">
+            <form id="loginForm" class="login-form flex flex-column items-center" action="">
+                <div class="mb-6">
+                    <h1 class="font-brand fs-30 fs-50-desktop text-center text-secondary">Sign In</h1>
+                </div>
+                <div class="form-inputs flex flex-column gap-3">
+                    <div class="input-group">
+                        <label class="fs-18-desktop fw-500 text-secondary" for="email">Email</label>
+                        <input id="email" 
+                               class="normal-input radius-10 pl-3 pr-3" 
+                               required 
+                               type="email" 
+                               placeholder="example@noroff.no"
+                               autocomplete="email">
+                        <small class="input-hint">Use your @noroff.no or @stud.noroff.no email</small>
+                    </div>
+                    <div class="input-group">
+                        <label class="fs-18-desktop fw-500 text-secondary" for="password">Password</label>
+                        <input id="password" 
+                               class="normal-input radius-10 pl-3 pr-3" 
+                               required 
+                               type="password" 
+                               placeholder="Minimum 8 characters"
+                               autocomplete="current-password">
+                    </div>         
+                </div>
+                <div id="loginError" class="error-message text-center mt-3 text-brand"></div>
+                <button type="submit" class="btn-primary mt-6">Sign in</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="tales-row-wrapper flex justify-center align-center">
+        <div class="tales-row flex justify-between p-6 font-brand gap-1 gap-6-desktop fs-20 fs-50-desktop">
+          <span class="tale dark">Tales</span>
+          <span class="tale orange">Tales</span>
+          <span class="tale dark">Tales</span>
+          <span class="tale orange">Tales</span>
+          <span class="tale dark">Tales</span>
+          <span class="tale orange">Tales</span>
+          <span class="tale dark">Tales</span>
+        </div>
+    </div>
+
+    <footer class="footer bg-secondary flex flex-column items-center pt-6 pr-6 pl-6 text-center">
+        <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="logo"></a>
+        <span class="fs-16 fw-700 mt-3">Follow Us</span>
+        <div class="flex flex-wrap gap-3 pt-4 pb-4 justify-center">
+            <img src="../assets/icons/facebook.png" alt="facebook" class="hover-effect">
+            <img src="../assets/icons/instagram.png" alt="instagram" class="hover-effect">
+            <img src="../assets/icons/youtube.png" alt="youtube" class="hover-effect">
+            <img src="../assets/icons/X.png" alt="X" class="hover-effect">
+        </div>
+        <p class="fs-18 fw-600 fs-20-desktop">Project Exam 2024-2025</p>
+        <p class="fs-18 fw-600 fs-20-desktop">PoemTales All Rights Reserved</p>
+        <div class="footer-bottom bg-primary mt-6"></div>
+    </footer>
+
+    <script src="../js/layout/nav.js" type="module"></script>
+    <script src="../js/layout/layout.js" type="module"></script>
+    <script src="../js/pages/login.js" type="module"></script>
+</body>
+</html>

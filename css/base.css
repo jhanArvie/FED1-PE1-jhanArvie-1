@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Pacifico&family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(./about.css);
+@import url(./account.css);
+@import url(./index.css);
+@import url(./create-post.css);
+@import url(./edit-post.css);
+@import url(./blogpost.css);
+@import url(./components/buttons.css);
+@import url(./components/form.css);
+@import url(./components/loader.css);
+@import url(./layout.css);
+@import url(./components/tags.css);
+@import url(./components/thumbnail.css);
+@import url(./components/filter.css);
+@import url(./components/pagination.css);
+
+:root { 
+    --fs-10: 0.625rem;
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem; /* 14px */
+    --fs-16: 1rem;     /* 16px */
+    --fs-18: 1.125rem; /* 18px */
+    --fs-20: 1.25rem;  /* 20px */
+    --fs-30: 1.875rem; /* 30px */
+    --fs-40: 2.5rem;   /* 40px */
+    --fs-50: 3.125rem; /* 50px */
+    --fs-60: 3.75rem;  /* 60px */
+    --fs-70: 4.375rem; /* 70px */
+
+    --brand-color: #E8964B;
+    --primary-color: #1C3540;
+    --secondary-color: #FDECC6;
+    --bg-color: #F4F0E7;
+    --bg-red:red;
+    --bg-blue: blue;
+  } 
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-size: var(--fs-16);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Crimson Pro', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+
+/* Utilities */
+.font-brand { font-family: 'Pacifico', cursive; }
+.font-primary { font-family: 'Crimson Pro'; }
+.bg-red { background-color: var(--bg-red); }
+.bg-blue { background-color: var(--bg-blue); }
+.cursor-pointer { cursor: pointer; }
+
+/* ===========================
+   Font Size Utilities
+=========================== */
+.fs-14 { font-size: var(--fs-14); }
+.fs-16 { font-size: var(--fs-16); }
+.fs-18 { font-size: var(--fs-18); }
+.fs-20 { font-size: var(--fs-20); }
+.fs-30 { font-size: var(--fs-30); }
+.fs-40 { font-size: var(--fs-40); }
+.fs-50 { font-size: var(--fs-50); }
+.fs-60 { font-size: var(--fs-60); }
+.fs-70 { font-size: var(--fs-70); }
+
+/* ===========================
+   Color Utilities
+=========================== */
+.text-brand { color: var(--brand-color); }
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+
+.bg-brand { background-color: var(--brand-color); }
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.bg-default { background-color: var(--bg-color); }
+
+/* === TEXT ALIGNMENT UTILITIES === */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ===========================
+   Margin Utilities
+=========================== */
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-3 { margin: 1rem; }
+.m-4 { margin: 1.5rem; }
+.m-5 { margin: 2rem; }
+.m-6 { margin: 3rem; }
+.m-auto { margin: auto; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 2rem; }
+.mt-6 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
+.mb-6 { margin-bottom: 3rem; }
+
+.ml-1 { margin-left: 0.25rem; }
+.ml-2 { margin-left: 0.5rem; }
+.ml-3 { margin-left: 1rem; }
+.ml-4 { margin-left: 1.5rem; }
+.ml-5 { margin-left: 2rem; }
+.ml-6 { margin-left: 3rem; }
+
+.mr-1 { margin-right: 0.25rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mr-3 { margin-right: 1rem; }
+.mr-4 { margin-right: 1.5rem; }
+.mr-5 { margin-right: 2rem; }
+.mr-6 { margin-right: 3rem; }
+
+/* ===========================
+   Padding Utilities
+=========================== */
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.p-4 { padding: 1.5rem; }
+.p-5 { padding: 2rem; }
+.p-6 { padding: 3rem; }
+.p-auto { padding: auto; }
+
+.pt-1 { padding-top: 0.25rem; }
+.pt-2 { padding-top: 0.5rem; }
+.pt-3 { padding-top: 1rem; }
+.pt-4 { padding-top: 1.5rem; }
+.pt-5 { padding-top: 2rem; }
+.pt-6 { padding-top: 3rem; }
+
+.pb-1 { padding-bottom: 0.25rem; }
+.pb-2 { padding-bottom: 0.5rem; }
+.pb-3 { padding-bottom: 1rem; }
+.pb-4 { padding-bottom: 1.5rem; }
+.pb-5 { padding-bottom: 2rem; }
+.pb-6 { padding-bottom: 3rem; }
+
+.pl-1 { padding-left: 0.25rem; }
+.pl-2 { padding-left: 0.5rem; }
+.pl-3 { padding-left: 1rem; }
+.pl-4 { padding-left: 1.5rem; }
+.pl-5 { padding-left: 2rem; }
+.pl-6 { padding-left: 3rem; }
+
+.pr-1 { padding-right: 0.25rem; }
+.pr-2 { padding-right: 0.5rem; }
+.pr-3 { padding-right: 1rem; }
+.pr-4 { padding-right: 1.5rem; }
+.pr-5 { padding-right: 2rem; }
+.pr-6 { padding-right: 3rem; }
+
+/* ===========================
+   Border Radius
+=========================== */
+.radius-4 { border-radius: 4px; }
+.radius-10 { border-radius: 10px; }
+
+/* ===========================
+   Font Weights
+=========================== */
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+/* ===========================
+   Flexbox Utilities
+=========================== */
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.self-start {align-self: flex-start;}
+.self-end {align-self: flex-end;}
+
+
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+.items-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+
+
+/* ===========================
+   Gap Utilities
+=========================== */
+.gap-auto {gap: auto;}
+.gap-1 { gap: 0.25rem; }   /* 4px */
+.gap-2 { gap: 0.5rem; }    /* 8px */
+.gap-3 { gap: 1rem; }      /* 16px */
+.gap-4 { gap: 1.5rem; }    /* 24px */
+.gap-5 { gap: 2rem; }      /* 32px */
+.gap-6 { gap: 3rem; }      /* 48px */
+
+
+/* Scale Utilities */
+.scale-50 {transform: scale(0.5);}
+.scale-75 {transform: scale(0.75);}
+.scale-100 {transform: scale(1);}
+.scale-125{transform: scale(1.25);}
+.scale-150{transform: scale(1.50);}
+.scale-200 {transform: scale(2);}
+
+
+/* === VISIBILITY UTILITIES === */
+
+/* Base (mobile) */
+.hide {
+    display: none !important;
+  }
+  
+  .show {
+    display: block !important;
+  }
+  
+
+
+  /* Show only on desktop and larger (768px and up) */
+  @media (min-width: 768px) {
+    .hide-desktop {
+      display: none !important;
+    }
+  
+    .show-desktop {
+      display: block !important;
+    }
+    
+    /* Font Sizes */
+    .fs-14-desktop { font-size: var(--fs-14); }
+    .fs-16-desktop { font-size: var(--fs-16); }
+    .fs-18-desktop { font-size: var(--fs-18); }
+    .fs-20-desktop { font-size: var(--fs-20); }
+    .fs-30-desktop { font-size: var(--fs-30); }
+    .fs-40-desktop { font-size: var(--fs-40); }
+    .fs-50-desktop { font-size: var(--fs-50); }
+    .fs-60-desktop { font-size: var(--fs-60); }
+    .fs-70-desktop { font-size: var(--fs-70); }
+
+    /* Text Alignment */
+    .text-left-desktop { text-align: left; }
+    .text-center-desktop { text-align: center; }
+    .text-right-desktop { text-align: right; }
+    .text-justify-desktop { text-align: justify; }
+
+    /* Flexbox */
+    .flex-desktop { display: flex; }
+    .inline-flex-desktop { display: inline-flex; }
+    .flex-row-desktop { flex-direction: row; }
+    .self-start-desktop {align-self: flex-start;}
+    .self-end-desktop {align-self: flex-end;}
+    .flex-column-desktop { flex-direction: column; }
+    .justify-start-desktop { justify-content: flex-start; }
+    .justify-center-desktop { justify-content: center; }
+    .justify-end-desktop { justify-content: flex-end; }
+    .justify-between-desktop { justify-content: space-between; }
+    .justify-around-desktop { justify-content: space-around; }
+    .items-start-desktop { align-items: flex-start; }
+    .items-center-desktop { align-items: center; }
+    .items-end-desktop { align-items: flex-end; }
+
+    /* Gaps */
+    .gap-1-desktop { gap: 0.25rem; }
+    .gap-2-desktop { gap: 0.5rem; }
+    .gap-3-desktop { gap: 1rem; }
+    .gap-4-desktop { gap: 1.5rem; }
+    .gap-5-desktop { gap: 2rem; }
+    .gap-6-desktop { gap: 3rem; }
+
+    /* Margins */
+    .m-1-desktop { margin: 0.25rem; }
+    .m-2-desktop { margin: 0.5rem; }
+    .m-3-desktop { margin: 1rem; }
+    .m-4-desktop { margin: 1.5rem; }
+    .m-5-desktop { margin: 2rem; }
+    .m-6-desktop { margin: 3rem; }
+
+    .mt-1-desktop { margin-top: 0.25rem; }
+    .mt-2-desktop { margin-top: 0.5rem; }
+    .mt-3-desktop { margin-top: 1rem; }
+    .mt-4-desktop { margin-top: 1.5rem; }
+    .mt-5-desktop { margin-top: 2rem; }
+    .mt-6-desktop { margin-top: 3rem; }
+
+    .mb-1-desktop { margin-bottom: 0.25rem; }
+    .mb-2-desktop { margin-bottom: 0.5rem; }
+    .mb-3-desktop { margin-bottom: 1rem; }
+    .mb-4-desktop { margin-bottom: 1.5rem; }
+    .mb-5-desktop { margin-bottom: 2rem; }
+    .mb-6-desktop { margin-bottom: 3rem; }
+
+    .ml-1-desktop { margin-left: 0.25rem; }
+    .ml-2-desktop { margin-left: 0.5rem; }
+    .ml-3-desktop { margin-left: 1rem; }
+    .ml-4-desktop { margin-left: 1.5rem; }
+    .ml-5-desktop { margin-left: 2rem; }
+    .ml-6-desktop { margin-left: 3rem; }
+
+    .mr-1-desktop { margin-right: 0.25rem; }
+    .mr-2-desktop { margin-right: 0.5rem; }
+    .mr-3-desktop { margin-right: 1rem; }
+    .mr-4-desktop { margin-right: 1.5rem; }
+    .mr-5-desktop { margin-right: 2rem; }
+    .mr-6-desktop { margin-right: 3rem; }
+
+    /* Padding */
+    .p-1-desktop { padding: 0.25rem; }
+    .p-2-desktop { padding: 0.5rem; }
+    .p-3-desktop { padding: 1rem; }
+    .p-4-desktop { padding: 1.5rem; }
+    .p-5-desktop { padding: 2rem; }
+    .p-6-desktop { padding: 3rem; }
+
+    .pt-1-desktop { padding-top: 0.25rem; }
+    .pt-2-desktop { padding-top: 0.5rem; }
+    .pt-3-desktop { padding-top: 1rem; }
+    .pt-4-desktop { padding-top: 1.5rem; }
+    .pt-5-desktop { padding-top: 2rem; }
+    .pt-6-desktop { padding-top: 3rem; }
+
+    .pb-1-desktop { padding-bottom: 0.25rem; }
+    .pb-2-desktop { padding-bottom: 0.5rem; }
+    .pb-3-desktop { padding-bottom: 1rem; }
+    .pb-4-desktop { padding-bottom: 1.5rem; }
+    .pb-5-desktop { padding-bottom: 2rem; }
+    .pb-6-desktop { padding-bottom: 3rem; }
+
+    .pl-1-desktop { padding-left: 0.25rem; }
+    .pl-2-desktop { padding-left: 0.5rem; }
+    .pl-3-desktop { padding-left: 1rem; }
+    .pl-4-desktop { padding-left: 1.5rem; }
+    .pl-5-desktop { padding-left: 2rem; }
+    .pl-6-desktop { padding-left: 3rem; }
+
+    .pr-1-desktop { padding-right: 0.25rem; }
+    .pr-2-desktop { padding-right: 0.5rem; }
+    .pr-3-desktop { padding-right: 1rem; }
+    .pr-4-desktop { padding-right: 1.5rem; }
+    .pr-5-desktop { padding-right: 2rem; }
+    .pr-6-desktop { padding-right: 3rem; }
+
+    /* Scale Utilities */
+    .scale-50-desktop {transform: scale(0.5);}
+    .scale-75-desktop {transform: scale(0.75);}
+    .scale-100-desktop {transform: scale(1);}
+    .scale-125-desktop{transform: scale(1.25);}
+    .scale-150-desktop{transform: scale(1.50);}
+    .scale-200-desktop {transform: scale(2);}
+ 
+  }
+  
+  /* Show only on mobile (767px and below) */
+  @media (max-width: 767px) {
+    .hide-mobile {
+      display: none !important;
+    }
+  
+    .show-mobile {
+      display: block !important;
+    }
+  }
+  
