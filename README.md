@@ -1,6 +1,12 @@
+![image](https://github.com/user-attachments/assets/953a0bf8-f7e0-4c58-9e78-a553b0317e8d)
+
+
 Git repo    https://github.com/NoroffFEU/FED1-PE1-jhanArvie.git
+
 Figma       https://www.figma.com/design/udV9skXSCpGCU8uE6dmsHO/Project-Exam-Blog-Post?node-id=66-107&t=FkNP52OeoxNEONyr-1
 
+
+Live view   https://poemtales.netlify.app/
 # Front-End Blogging Application Project Brief
 
 
